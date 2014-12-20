@@ -1,0 +1,79 @@
+{
+    "lab": {
+      "description": {
+            "id": "",
+            "name": "",
+            "discipline": ["Chemical Sciences"],
+            "status": "",
+            "type": "",
+            "integration_level": 0,
+            "server-side": true,
+            "developer": [
+                {
+                    "contact": {
+                        "email": "vysakhkk@amrita.ac.in",
+                        "alternate_email": "lettertovysakh@gmail.com",
+                        "mobile_number": "09497216694",
+                        "office_number": "04762824528"
+                    },
+                    "department": "Chemistry",
+                    "institute": "Amrita University",
+                    "name": "Vysakh",
+                    "organization": "Amrita Vishwa Vidyapeetham",
+                    "role": "Developer",
+                    "title": "Virtual Labs",
+                    "web": "vlab.co.in"
+                }
+            ]
+        },
+        "build_requirements": {
+            "platform": {
+                "arch": "i386",
+                "build_steps": {
+                    "build": ["make -C ../src"],
+                    "configure": [],
+                    "post_build": [],
+                    "pre_build": [],
+                    "status": []
+                },
+                "installer": [],
+                "os": "ubuntu",
+                "osVersion": "12",
+                "service_pack": ""
+            }
+        },
+        "runtime_requirements": {
+            "platform": {
+                "arch": "x86_64",
+                "hosting": "dedicated",
+                "installer": ["sudo apt-get update", 
+             "sudo apt-get install -y apache2","sudo apt-get install -y mysql memcache"],
+                "lab_actions": {
+                    "backup": [],
+                    "clean": [],
+                    "init": ["mv /var/www/index.html index.html.default",
+         "cp -r ../src/* /var/www/"],
+                    "pause": [],
+                    "publish": [],
+                    "restore": ["restore"],
+                    "resume": [],
+                    "shutdown": ["service apache2 stop"],
+                    "start": ["service apache2 start"],
+                    "stats": [],
+                    "stop": []
+                },
+                "memory": {
+                    "max_required": "",
+                    "min_required": ""
+                },
+                "os": "ubuntu",
+                "osVersion": "12",
+                "servicepack": "",
+                "storage": {
+                    "min_required": ""
+                }
+            }
+        }
+    },
+    "template": "1.0"
+}
